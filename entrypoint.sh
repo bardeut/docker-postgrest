@@ -20,10 +20,10 @@ SLEEP=${SLEEP:-"0"}
 sleep "$SLEEP"
 
 postgrest postgres://$DBUSER:$DBPASS@$DBHOST:$DBPORT/$DBNAME \
-          --pool "$DBPOOL" \
-          --port "$PORT" \
-          --anonymous "$ANONUSER" \
-          --schema "$SCHEMA" \
+          --db-pool "$DBPOOL" \
+          --server-port "$PORT" \
+          --db-anon-role "$ANONUSER" \
+          --db-schema "$SCHEMA" \
           --jwt-aud "$JWT_AUD" \
           --jwt-secret "$JWT_SECRET" \
           --secret-is-base64 true
