@@ -23,5 +23,9 @@ postgrest postgres://$DBUSER:$DBPASS@$DBHOST:$DBPORT/$DBNAME \
           --pool "$DBPOOL" \
           --port "$PORT" \
           --anonymous "$ANONUSER" \
-          --schema "$SCHEMA"
+          --schema "$SCHEMA" \
+          --jwt-aud "$JWT_AUD" \
+          --jwt-secret "$JWT_SECRET" \
+          --secret-is-base64 true
+
 
